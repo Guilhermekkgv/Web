@@ -555,8 +555,8 @@ local SearchFrame = Linux.Instance("Frame", {
     BackgroundColor3 = Color3.fromRGB(20, 20, 20),
     BorderSizePixel = 0,
     BorderColor3 = Color3.fromRGB(39, 39, 42),
-    Size = UDim2.new(1, -12, 0, 32),
-    Position = UDim2.new(0, 6, 0, 6),
+    Size = UDim2.new(1, -10, 0, 30),
+    Position = UDim2.new(0, 5, 0, 5),
     ZIndex = 3
 })
 
@@ -574,8 +574,8 @@ Linux.Instance("UIStroke", {
 local SearchIcon = Linux.Instance("ImageLabel", {
     Parent = SearchFrame,
     BackgroundTransparency = 1,
-    Size = UDim2.new(0, 16, 0, 16),
-    Position = UDim2.new(0, 8, 0.5, -8),
+    Size = UDim2.new(0, 14, 0, 14),
+    Position = UDim2.new(0, 8, 0.5, -7),
     Image = "rbxassetid://10734943674",
     ImageColor3 = Color3.fromRGB(120, 120, 130),
     ZIndex = 3
@@ -584,14 +584,14 @@ local SearchIcon = Linux.Instance("ImageLabel", {
 local SearchBox = Linux.Instance("TextBox", {
     Parent = SearchFrame,
     BackgroundTransparency = 1,
-    Size = UDim2.new(1, -32, 1, 0),
-    Position = UDim2.new(0, 32, 0, 0),
+    Size = UDim2.new(1, -30, 1, 0),
+    Position = UDim2.new(0, 30, 0, 0),
     Font = Enum.Font.GothamSemibold,
     Text = "",
     PlaceholderText = "Search...",
     PlaceholderColor3 = Color3.fromRGB(120, 120, 130),
     TextColor3 = Color3.fromRGB(200, 200, 210),
-    TextSize = 14,
+    TextSize = 13,
     TextXAlignment = Enum.TextXAlignment.Left,
     ZIndex = 3,
     ClearTextOnFocus = false,
@@ -602,8 +602,8 @@ local SearchBox = Linux.Instance("TextBox", {
 local ProfileFrame = Linux.Instance("Frame", {
     Parent = TabsBar,
     BackgroundTransparency = 1,
-    Size = UDim2.new(1, 0, 0, 50),
-    Position = UDim2.new(0, 0, 1, -50),
+    Size = UDim2.new(1, 0, 0, 48),
+    Position = UDim2.new(0, 0, 1, -48),
     ZIndex = 3
 })
 
@@ -612,15 +612,15 @@ local ProfileSeparatorLine = Linux.Instance("Frame", {
     BackgroundColor3 = Color3.fromRGB(39, 39, 42),
     BorderSizePixel = 0,
     Size = UDim2.new(1, 0, 0, 1),
-    Position = UDim2.new(0, 0, 0, 5),
+    Position = UDim2.new(0, 0, 0, 4),
     ZIndex = 3
 })
 
 local ProfileImage = Linux.Instance("ImageLabel", {
     Parent = ProfileFrame,
-    BackgroundTransparency = 1,
-    Size = UDim2.new(0, 32, 0, 32),
-    Position = UDim2.new(0, 10, 0, 13),
+    BackgroundColor3 = Color3.fromRGB(255, 105, 180),
+    Size = UDim2.new(0, 30, 0, 30),
+    Position = UDim2.new(0, 8, 0, 12),
     Image = Players:GetUserThumbnailAsync(LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size48x48),
     ZIndex = 3
 })
@@ -632,19 +632,19 @@ Linux.Instance("UICorner", {
 
 Linux.Instance("UIStroke", {
     Parent = ProfileImage,
-    Color = Color3.fromRGB(60, 60, 70),
-    Thickness = 1
+    Color = Color3.fromRGB(255, 105, 180),
+    Thickness = 2
 })
 
 local PlayerName = Linux.Instance("TextLabel", {
     Parent = ProfileFrame,
     BackgroundTransparency = 1,
-    Size = UDim2.new(1, -52, 0, 32),
-    Position = UDim2.new(0, 50, 0, 13),
+    Size = UDim2.new(1, -48, 0, 30),
+    Position = UDim2.new(0, 46, 0, 12),
     Font = Enum.Font.GothamSemibold,
     Text = LocalPlayer.DisplayName,
     TextColor3 = Color3.fromRGB(200, 200, 210),
-    TextSize = 14,
+    TextSize = 13,
     TextXAlignment = Enum.TextXAlignment.Left,
     TextTruncate = Enum.TextTruncate.AtEnd,
     ZIndex = 3
@@ -653,8 +653,8 @@ local PlayerName = Linux.Instance("TextLabel", {
 local TabHolder = Linux.Instance("ScrollingFrame", {
     Parent = TabsBar,
     BackgroundTransparency = 1,
-    Position = UDim2.new(0, 0, 0, 44),
-    Size = UDim2.new(1, 0, 1, -94),
+    Position = UDim2.new(0, 0, 0, 40),
+    Size = UDim2.new(1, 0, 1, -88),
     CanvasSize = UDim2.new(0, 0, 0, 0),
     AutomaticCanvasSize = Enum.AutomaticSize.Y,
     ScrollBarThickness = 0,
@@ -666,7 +666,7 @@ local TabHolder = Linux.Instance("ScrollingFrame", {
 
 Linux.Instance("UIListLayout", {
     Parent = TabHolder,
-    Padding = UDim.new(0, 2),
+    Padding = UDim.new(0, 1),
     HorizontalAlignment = Enum.HorizontalAlignment.Left,
     VerticalAlignment = Enum.VerticalAlignment.Top,
     SortOrder = Enum.SortOrder.LayoutOrder
@@ -674,9 +674,9 @@ Linux.Instance("UIListLayout", {
 
 Linux.Instance("UIPadding", {
     Parent = TabHolder,
-    PaddingLeft = UDim.new(0, 8),
-    PaddingRight = UDim.new(0, 8),
-    PaddingTop = UDim.new(0, 6)
+    PaddingLeft = UDim.new(0, 6),
+    PaddingRight = UDim.new(0, 6),
+    PaddingTop = UDim.new(0, 4)
 })
 
 local Content = Linux.Instance("Frame", {
@@ -733,27 +733,49 @@ Main:GetPropertyChangedSignal("Position"):Connect(function()
     end
 end)
 
+local buttonClickedState = false
+
 CancelButton.MouseEnter:Connect(function()
-    TweenService:Create(CancelButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
+    if not buttonClickedState then
+        TweenService:Create(CancelButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 120, 190)}):Play()
+    end
 end)
 
 CancelButton.MouseLeave:Connect(function()
-    TweenService:Create(CancelButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
-end)
-
-ConfirmButton.MouseEnter:Connect(function()
-    TweenService:Create(ConfirmButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
-end)
-
-ConfirmButton.MouseLeave:Connect(function()
-    TweenService:Create(ConfirmButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
+    if not buttonClickedState then
+        TweenService:Create(CancelButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
+    end
 end)
 
 CancelButton.MouseButton1Click:Connect(function()
+    buttonClickedState = not buttonClickedState
+    if buttonClickedState then
+        TweenService:Create(CancelButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 140, 200)}):Play()
+    else
+        TweenService:Create(CancelButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
+    end
     HideConfirmationDialog()
 end)
 
+ConfirmButton.MouseEnter:Connect(function()
+    if not buttonClickedState then
+        TweenService:Create(ConfirmButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 120, 190)}):Play()
+    end
+end)
+
+ConfirmButton.MouseLeave:Connect(function()
+    if not buttonClickedState then
+        TweenService:Create(ConfirmButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
+    end
+end)
+
 ConfirmButton.MouseButton1Click:Connect(function()
+    buttonClickedState = not buttonClickedState
+    if buttonClickedState then
+        TweenService:Create(ConfirmButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 140, 200)}):Play()
+    else
+        TweenService:Create(ConfirmButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
+    end
     LinuxUI:Destroy()
 end)
 
@@ -818,11 +840,11 @@ function LinuxLib.Tab(config)
         BackgroundTransparency = 1,
         BorderColor3 = Color3.fromRGB(39, 39, 42),
         BorderSizePixel = 0,
-        Size = UDim2.new(1, 0, 0, 32),
+        Size = UDim2.new(1, 0, 0, 30),
         Font = Enum.Font.GothamSemibold,
         Text = "",
         TextColor3 = Color3.fromRGB(200, 200, 210),
-        TextSize = 14,
+        TextSize = 13,
         ZIndex = 2,
         AutoButtonColor = false,
         LayoutOrder = tabIndex
@@ -844,27 +866,45 @@ function LinuxLib.Tab(config)
         TabIcon = Linux.Instance("ImageLabel", {
             Parent = TabBtn,
             BackgroundTransparency = 1,
-            Size = UDim2.new(0, 18, 0, 18),
-            Position = UDim2.new(0, 10, 0.5, -9),
+            Size = UDim2.new(0, 16, 0, 16),
+            Position = UDim2.new(0, 8, 0.5, -8),
             Image = config.Icon,
             ImageColor3 = Color3.fromRGB(150, 150, 150),
             ZIndex = 2
         })
     end
     
-    local textOffset = config.Icon and config.Enabled and 33 or 16
+    local textOffset = config.Icon and config.Enabled and 30 or 14
     local TabText = Linux.Instance("TextLabel", {
         Parent = TabBtn,
         BackgroundTransparency = 1,
-        Size = UDim2.new(1, -(textOffset + 20), 1, 0),
+        Size = UDim2.new(1, -(textOffset + 16), 1, 0),
         Position = UDim2.new(0, textOffset, 0, 0),
         Font = Enum.Font.GothamSemibold,
         Text = config.Name,
         TextColor3 = Color3.fromRGB(150, 150, 150),
-        TextSize = 14,
+        TextSize = 13,
         TextXAlignment = Enum.TextXAlignment.Left,
         ZIndex = 2
     })
+    
+    TabBtn.MouseEnter:Connect(function()
+        if CurrentTab ~= tabIndex then
+            TweenService:Create(TabText, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+            if TabIcon then
+                TweenService:Create(TabIcon, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+            end
+        end
+    end)
+    
+    TabBtn.MouseLeave:Connect(function()
+        if CurrentTab ~= tabIndex then
+            TweenService:Create(TabText, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(150, 150, 150)}):Play()
+            if TabIcon then
+                TweenService:Create(TabIcon, TweenInfo.new(0.2), {ImageColor3 = Color3.fromRGB(150, 150, 150)}):Play()
+            end
+        end
+    end)
     
     local TabContent = Linux.Instance("Frame", {
         Parent = Content,
@@ -880,7 +920,7 @@ function LinuxLib.Tab(config)
         Parent = Content,
         BackgroundColor3 = Color3.fromRGB(18, 18, 18),
         BackgroundTransparency = 1,
-        Size = UDim2.new(1, 0, 0, 50),
+        Size = UDim2.new(1, 0, 0, 46),
         Position = UDim2.new(0, 0, 0, 0),
         Visible = false,
         ZIndex = 3,
@@ -891,12 +931,12 @@ function LinuxLib.Tab(config)
     local TitleLabel = Linux.Instance("TextLabel", {
         Parent = TitleFrame,
         BackgroundTransparency = 1,
-        Size = UDim2.new(1, -20, 1, 0),
-        Position = UDim2.new(0, 10, 0, 0),
+        Size = UDim2.new(1, -18, 1, 0),
+        Position = UDim2.new(0, 9, 0, 0),
         Font = Enum.Font.GothamBold,
         Text = config.Name,
         TextColor3 = Color3.fromRGB(230, 230, 240),
-        TextSize = 24,
+        TextSize = 22,
         TextXAlignment = Enum.TextXAlignment.Left,
         TextYAlignment = Enum.TextYAlignment.Center,
         ZIndex = 4
@@ -905,8 +945,8 @@ function LinuxLib.Tab(config)
     local Container = Linux.Instance("ScrollingFrame", {
         Parent = TabContent,
         BackgroundTransparency = 1,
-        Size = UDim2.new(1, -16, 1, -70),
-        Position = UDim2.new(0, 12, 0, 55),
+        Size = UDim2.new(1, -14, 1, -64),
+        Position = UDim2.new(0, 10, 0, 50),
         CanvasSize = UDim2.new(0, 0, 0, 0),
         AutomaticCanvasSize = Enum.AutomaticSize.Y,
         ScrollBarThickness = 0,
@@ -919,14 +959,14 @@ function LinuxLib.Tab(config)
     
     local ContainerListLayout = Linux.Instance("UIListLayout", {
         Parent = Container,
-        Padding = UDim.new(0, 2),
+        Padding = UDim.new(0, 1),
         HorizontalAlignment = Enum.HorizontalAlignment.Left,
         SortOrder = Enum.SortOrder.LayoutOrder
     })
     
     Linux.Instance("UIPadding", {
         Parent = Container,
-        PaddingLeft = UDim.new(0, 2),
+        PaddingLeft = UDim.new(0, 1),
         PaddingTop = UDim.new(0, 0)
     })
     
@@ -1036,9 +1076,9 @@ function LinuxLib.Tab(config)
     function TabElements.Button(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -1047,7 +1087,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 36),
+            Size = UDim2.new(1, -6, 0, 34),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -1071,7 +1111,7 @@ function LinuxLib.Tab(config)
             Font = Enum.Font.GothamSemibold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2,
             AutoButtonColor = false
@@ -1079,18 +1119,26 @@ function LinuxLib.Tab(config)
         
         Linux.Instance("UIPadding", {
             Parent = Btn,
-            PaddingLeft = UDim.new(0, 10)
+            PaddingLeft = UDim.new(0, 9)
         })
         
         local BtnIcon = Linux.Instance("ImageLabel", {
             Parent = BtnFrame,
             BackgroundTransparency = 1,
-            Size = UDim2.new(0, 16, 0, 16),
-            Position = UDim2.new(1, -26, 0.5, -8),
+            Size = UDim2.new(0, 14, 0, 14),
+            Position = UDim2.new(1, -22, 0.5, -7),
             Image = "https://www.roblox.com/asset/?id=10734929723",
             ImageColor3 = Color3.fromRGB(200, 200, 200),
             ZIndex = 2
         })
+        
+        BtnFrame.MouseEnter:Connect(function()
+            TweenService:Create(Btn, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        BtnFrame.MouseLeave:Connect(function()
+            TweenService:Create(Btn, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
         
         Btn.MouseButton1Click:Connect(function()
             spawn(function() Linux:SafeCallback(config.Callback) end)
@@ -1112,9 +1160,9 @@ function LinuxLib.Tab(config)
     function TabElements.Toggle(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -1123,7 +1171,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 36),
+            Size = UDim2.new(1, -6, 0, 34),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -1142,12 +1190,12 @@ function LinuxLib.Tab(config)
         local ToggleText = Linux.Instance("TextLabel", {
             Parent = Toggle,
             BackgroundTransparency = 1,
-            Size = UDim2.new(1, -60, 1, 0),
-            Position = UDim2.new(0, 10, 0, 0),
+            Size = UDim2.new(1, -56, 1, 0),
+            Position = UDim2.new(0, 9, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2,
             Name = "ToggleText"
@@ -1156,8 +1204,8 @@ function LinuxLib.Tab(config)
         local ToggleTrack = Linux.Instance("Frame", {
             Parent = Toggle,
             BackgroundColor3 = Color3.fromRGB(18, 18, 18),
-            Size = UDim2.new(0, 36, 0, 18),
-            Position = UDim2.new(1, -46, 0.5, -9),
+            Size = UDim2.new(0, 34, 0, 16),
+            Position = UDim2.new(1, -42, 0.5, -8),
             ZIndex = 2,
             BorderSizePixel = 0,
             BorderColor3 = Color3.fromRGB(39, 39, 42),
@@ -1178,8 +1226,8 @@ function LinuxLib.Tab(config)
         local ToggleKnob = Linux.Instance("Frame", {
             Parent = ToggleTrack,
             BackgroundColor3 = Color3.fromRGB(200, 200, 210),
-            Size = UDim2.new(0, 14, 0, 14),
-            Position = UDim2.new(0, 2, 0.5, -7),
+            Size = UDim2.new(0, 12, 0, 12),
+            Position = UDim2.new(0, 2, 0.5, -6),
             ZIndex = 3,
             BorderSizePixel = 0,
             BorderColor3 = Color3.fromRGB(39, 39, 42),
@@ -1200,6 +1248,14 @@ function LinuxLib.Tab(config)
         local State = config.Default or false
         Toggle:SetAttribute("State", State)
         
+        Toggle.MouseEnter:Connect(function()
+            TweenService:Create(ToggleText, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        Toggle.MouseLeave:Connect(function()
+            TweenService:Create(ToggleText, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
+        
         local isToggling = false
         local function UpdateToggle(thisToggle)
             if isToggling then return end
@@ -1213,10 +1269,10 @@ function LinuxLib.Tab(config)
                 local tween = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
                 if currentState then
                     TweenService:Create(thisTrack, tween, {BackgroundColor3 = Color3.fromRGB(255, 105, 180)}):Play()
-                    TweenService:Create(thisKnob, tween, {Position = UDim2.new(0, 20, 0.5, -7), BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+                    TweenService:Create(thisKnob, tween, {Position = UDim2.new(0, 20, 0.5, -6), BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
                 else
                     TweenService:Create(thisTrack, tween, {BackgroundColor3 = Color3.fromRGB(17, 17, 18)}):Play()
-                    TweenService:Create(thisKnob, tween, {Position = UDim2.new(0, 2, 0.5, -7), BackgroundColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+                    TweenService:Create(thisKnob, tween, {Position = UDim2.new(0, 2, 0.5, -6), BackgroundColor3 = Color3.fromRGB(200, 200, 210)}):Play()
                 end
             end
             
@@ -1282,7 +1338,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 36),
+            Size = UDim2.new(1, -6, 0, 34),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -1305,23 +1361,31 @@ function LinuxLib.Tab(config)
             Font = Enum.Font.GothamSemibold,
             Text = "",
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             ZIndex = 2,
             AutoButtonColor = false
         })
         
-        Linux.Instance("TextLabel", {
+        local DropdownLabel = Linux.Instance("TextLabel", {
             Parent = DropdownButton,
             BackgroundTransparency = 1,
             Size = UDim2.new(0.6, 0, 1, 0),
-            Position = UDim2.new(0, 10, 0, 0),
+            Position = UDim2.new(0, 9, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2
         })
+        
+        Dropdown.MouseEnter:Connect(function()
+            TweenService:Create(DropdownLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        Dropdown.MouseLeave:Connect(function()
+            TweenService:Create(DropdownLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
         
         local Options = config.Options or {}
         local SelectedValue = config.Default or (Options[1] or "None")
@@ -1344,7 +1408,7 @@ function LinuxLib.Tab(config)
             if typeof(value) == "table" then
                 if #value > 0 then
                     local displayText = table.concat(value, ", ")
-                    return displayText:sub(1, 20) .. (#displayText > 20 and "..." or "")
+                    return displayText:sub(1, 18) .. (#displayText > 18 and "..." or "")
                 else
                     return "None"
                 end
@@ -1356,12 +1420,12 @@ function LinuxLib.Tab(config)
         local Selected = Linux.Instance("TextLabel", {
             Parent = DropdownButton,
             BackgroundTransparency = 1,
-            Size = UDim2.new(0.3, -21, 1, 0),
-            Position = UDim2.new(0.65, 5, 0, 0),
+            Size = UDim2.new(0.3, -18, 1, 0),
+            Position = UDim2.new(0.65, 4, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = IsMulti and FormatDisplayText(SelectedValues) or FormatDisplayText(SelectedValue),
             TextColor3 = Color3.fromRGB(255, 255, 255),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Right,
             ZIndex = 2
         })
@@ -1369,8 +1433,8 @@ function LinuxLib.Tab(config)
         local Arrow = Linux.Instance("ImageLabel", {
             Parent = DropdownButton,
             BackgroundTransparency = 1,
-            Size = UDim2.new(0, 16, 0, 16),
-            Position = UDim2.new(1, -26, 0.5, -8),
+            Size = UDim2.new(0, 14, 0, 14),
+            Position = UDim2.new(1, -22, 0.5, -7),
             Image = "https://www.roblox.com/asset/?id=10709791437",
             ImageColor3 = Color3.fromRGB(200, 200, 200),
             Rotation = 0,
@@ -1382,7 +1446,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 0),
+            Size = UDim2.new(1, -6, 0, 0),
             ZIndex = 3,
             LayoutOrder = elementOrder + 1,
             ClipsDescendants = true,
@@ -1422,19 +1486,19 @@ function LinuxLib.Tab(config)
         
         Linux.Instance("UIPadding", {
             Parent = OptionsHolder,
-            PaddingLeft = UDim.new(0, 5),
-            PaddingRight = UDim.new(0, 5),
-            PaddingTop = UDim.new(0, 5),
-            PaddingBottom = UDim.new(0, 5)
+            PaddingLeft = UDim.new(0, 4),
+            PaddingRight = UDim.new(0, 4),
+            PaddingTop = UDim.new(0, 4),
+            PaddingBottom = UDim.new(0, 4)
         })
         
         local IsOpen = false
         
         local function UpdateDropSize()
-            local optionHeight = 28
+            local optionHeight = 26
             local paddingBetween = 1
-            local paddingTopBottom = 10
-            local maxHeight = 150
+            local paddingTopBottom = 8
+            local maxHeight = 140
             local numOptions = #Options
             local calculatedHeight = numOptions * optionHeight + (numOptions > 0 and (numOptions - 1) * paddingBetween + paddingTopBottom or 0)
             local finalHeight = math.min(calculatedHeight, maxHeight)
@@ -1443,11 +1507,11 @@ function LinuxLib.Tab(config)
             
             if IsOpen then
                 DropFrame.Visible = true
-                DropFrame.Size = UDim2.new(1, -8, 0, 0)
-                TweenService:Create(DropFrame, tween, {Size = UDim2.new(1, -8, 0, finalHeight)}):Play()
+                DropFrame.Size = UDim2.new(1, -6, 0, 0)
+                TweenService:Create(DropFrame, tween, {Size = UDim2.new(1, -6, 0, finalHeight)}):Play()
                 TweenService:Create(Arrow, tween, {Rotation = 85}):Play()
             else
-                TweenService:Create(DropFrame, tween, {Size = UDim2.new(1, -8, 0, 0)}):Play()
+                TweenService:Create(DropFrame, tween, {Size = UDim2.new(1, -6, 0, 0)}):Play()
                 TweenService:Create(Arrow, tween, {Rotation = 0}):Play()
                 task.delay(0.25, function()
                     if not IsOpen then
@@ -1481,11 +1545,11 @@ function LinuxLib.Tab(config)
                         BackgroundColor3 = Color3.fromRGB(21, 21, 21),
                         BorderColor3 = Color3.fromRGB(39, 39, 42),
                         BorderSizePixel = 0,
-                        Size = UDim2.new(1, -4, 0, 28),
+                        Size = UDim2.new(1, -3, 0, 26),
                         Font = Enum.Font.GothamSemibold,
                         Text = tostring(opt),
                         TextColor3 = isSelected and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(200, 200, 210),
-                        TextSize = 14,
+                        TextSize = 13,
                         ZIndex = 3,
                         AutoButtonColor = false,
                         LayoutOrder = i
@@ -1638,9 +1702,9 @@ function LinuxLib.Tab(config)
     function TabElements.Slider(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -1648,7 +1712,7 @@ function LinuxLib.Tab(config)
             Parent = Container,
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 42),
+            Size = UDim2.new(1, -6, 0, 38),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -1667,21 +1731,29 @@ function LinuxLib.Tab(config)
         local TitleLabel = Linux.Instance("TextLabel", {
             Parent = Slider,
             BackgroundTransparency = 1,
-            Size = UDim2.new(0.6, 0, 0, 16),
-            Position = UDim2.new(0, 10, 0, 4),
+            Size = UDim2.new(0.6, 0, 0, 14),
+            Position = UDim2.new(0, 9, 0, 3),
             Font = Enum.Font.GothamSemibold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2
         })
         
+        Slider.MouseEnter:Connect(function()
+            TweenService:Create(TitleLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        Slider.MouseLeave:Connect(function()
+            TweenService:Create(TitleLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
+        
         local SliderBar = Linux.Instance("Frame", {
             Parent = Slider,
             BackgroundColor3 = Color3.fromRGB(23, 23, 23),
-            Size = UDim2.new(1, -20, 0, 6),
-            Position = UDim2.new(0, 10, 0, 26),
+            Size = UDim2.new(1, -18, 0, 5),
+            Position = UDim2.new(0, 9, 0, 23),
             ZIndex = 2,
             BorderSizePixel = 0,
             BorderColor3 = Color3.fromRGB(39, 39, 42),
@@ -1704,12 +1776,12 @@ function LinuxLib.Tab(config)
             Parent = Slider,
             BackgroundColor3 = Color3.fromRGB(24, 24, 24),
             BackgroundTransparency = 0,
-            Size = UDim2.new(0, 50, 0, 16),
-            Position = UDim2.new(1, -60, 0, 4),
+            Size = UDim2.new(0, 46, 0, 14),
+            Position = UDim2.new(1, -54, 0, 3),
             Font = Enum.Font.GothamSemibold,
             Text = "",
             TextColor3 = Color3.fromRGB(255, 255, 255),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Center,
             ZIndex = 2,
             BorderSizePixel = 0,
@@ -1765,9 +1837,9 @@ function LinuxLib.Tab(config)
         
         local function AnimateValueLabel()
             local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-            TweenService:Create(ValueLabel, tweenInfo, {TextSize = 16}):Play()
+            TweenService:Create(ValueLabel, tweenInfo, {TextSize = 15}):Play()
             task.wait(0.2)
-            TweenService:Create(ValueLabel, tweenInfo, {TextSize = 14}):Play()
+            TweenService:Create(ValueLabel, tweenInfo, {TextSize = 13}):Play()
         end
         
         local function FormatValue(value)
@@ -1895,9 +1967,9 @@ function LinuxLib.Tab(config)
     function TabElements.Input(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -1906,7 +1978,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 36),
+            Size = UDim2.new(1, -6, 0, 34),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -1922,24 +1994,32 @@ function LinuxLib.Tab(config)
             Thickness = 1
         })
         
-        Linux.Instance("TextLabel", {
+        local InputLabel = Linux.Instance("TextLabel", {
             Parent = Input,
             BackgroundTransparency = 1,
             Size = UDim2.new(0.6, 0, 1, 0),
-            Position = UDim2.new(0, 10, 0, 0),
+            Position = UDim2.new(0, 9, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2
         })
         
+        Input.MouseEnter:Connect(function()
+            TweenService:Create(InputLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        Input.MouseLeave:Connect(function()
+            TweenService:Create(InputLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
+        
         local InputIcon = Linux.Instance("ImageLabel", {
             Parent = Input,
             BackgroundTransparency = 1,
-            Size = UDim2.new(0, 16, 0, 16),
-            Position = UDim2.new(1, -42, 0.5, -8),
+            Size = UDim2.new(0, 14, 0, 14),
+            Position = UDim2.new(1, -38, 0.5, -7),
             Image = "rbxassetid://10710001408",
             ImageColor3 = Color3.fromRGB(200, 200, 200),
             ZIndex = 2
@@ -1951,14 +2031,14 @@ function LinuxLib.Tab(config)
             Parent = Input,
             BackgroundColor3 = Color3.fromRGB(19, 19, 19),
             BorderSizePixel = 0,
-            Size = UDim2.new(0.3, -16, 0, 24),
-            Position = UDim2.new(0.7, -20, 0.5, -12),
+            Size = UDim2.new(0.3, -14, 0, 22),
+            Position = UDim2.new(0.7, -18, 0.5, -11),
             Font = Enum.Font.GothamSemibold,
             Text = config.Default or "",
             PlaceholderText = config.Placeholder or (IsNumeric and "Number here" or "Text here"),
             PlaceholderColor3 = Color3.fromRGB(120, 120, 130),
             TextColor3 = Color3.fromRGB(255, 255, 255),
-            TextSize = 12,
+            TextSize = 11,
             TextScaled = false,
             TextTruncate = Enum.TextTruncate.AtEnd,
             TextXAlignment = Enum.TextXAlignment.Center,
@@ -1981,8 +2061,8 @@ function LinuxLib.Tab(config)
         
         Linux.Instance("UIPadding", {
             Parent = TextBox,
-            PaddingLeft = UDim.new(0, 6),
-            PaddingRight = UDim.new(0, 6)
+            PaddingLeft = UDim.new(0, 5),
+            PaddingRight = UDim.new(0, 5)
         })
         
         local MaxLength = 100
@@ -2124,9 +2204,9 @@ function LinuxLib.Tab(config)
     function TabElements.Label(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -2135,7 +2215,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 36),
+            Size = UDim2.new(1, -6, 0, 34),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -2154,16 +2234,24 @@ function LinuxLib.Tab(config)
         local LabelText = Linux.Instance("TextLabel", {
             Parent = LabelFrame,
             BackgroundTransparency = 1,
-            Size = UDim2.new(1, -20, 1, 0),
-            Position = UDim2.new(0, 10, 0, 0),
+            Size = UDim2.new(1, -18, 1, 0),
+            Position = UDim2.new(0, 9, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = config.Text or "Label",
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             TextTruncate = Enum.TextTruncate.AtEnd,
             ZIndex = 2
         })
+        
+        LabelFrame.MouseEnter:Connect(function()
+            TweenService:Create(LabelText, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        LabelFrame.MouseLeave:Connect(function()
+            TweenService:Create(LabelText, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
         
         local UpdateConnection = nil
         local lastUpdate = 0
@@ -2225,9 +2313,9 @@ function LinuxLib.Tab(config)
     function TabElements.Section(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -2235,7 +2323,7 @@ function LinuxLib.Tab(config)
             Parent = Container,
             BackgroundColor3 = Color3.fromRGB(255, 255, 255),
             BackgroundTransparency = 1,
-            Size = UDim2.new(1, 0, 0, 30),
+            Size = UDim2.new(1, 0, 0, 28),
             AutomaticSize = Enum.AutomaticSize.Y,
             ZIndex = 2,
             LayoutOrder = elementOrder,
@@ -2247,12 +2335,12 @@ function LinuxLib.Tab(config)
         local SectionLabel = Linux.Instance("TextLabel", {
             Parent = Section,
             BackgroundTransparency = 1,
-            Size = UDim2.new(1, -20, 0, 30),
+            Size = UDim2.new(1, -18, 0, 28),
             Position = UDim2.new(0, 0, 0, 0),
             Font = Enum.Font.GothamBold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(255, 255, 255),
-            TextSize = 18,
+            TextSize = 17,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2
         })
@@ -2273,9 +2361,9 @@ function LinuxLib.Tab(config)
     function TabElements.Paragraph(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -2284,7 +2372,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 0),
+            Size = UDim2.new(1, -6, 0, 0),
             AutomaticSize = Enum.AutomaticSize.Y,
             ZIndex = 1,
             LayoutOrder = elementOrder
@@ -2301,28 +2389,36 @@ function LinuxLib.Tab(config)
             Thickness = 1
         })
         
-        Linux.Instance("TextLabel", {
+        local ParagraphTitle = Linux.Instance("TextLabel", {
             Parent = ParagraphFrame,
             BackgroundTransparency = 1,
-            Size = UDim2.new(1, -20, 0, 26),
-            Position = UDim2.new(0, 10, 0, 5),
+            Size = UDim2.new(1, -18, 0, 24),
+            Position = UDim2.new(0, 9, 0, 4),
             Font = Enum.Font.GothamBold,
             Text = config.Title or "Paragraph",
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 16,
+            TextSize = 15,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2
         })
         
+        ParagraphFrame.MouseEnter:Connect(function()
+            TweenService:Create(ParagraphTitle, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        ParagraphFrame.MouseLeave:Connect(function()
+            TweenService:Create(ParagraphTitle, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
+        
         local Content = Linux.Instance("TextLabel", {
             Parent = ParagraphFrame,
             BackgroundTransparency = 1,
-            Size = UDim2.new(1, -20, 0, 0),
-            Position = UDim2.new(0, 10, 0, 30),
+            Size = UDim2.new(1, -18, 0, 0),
+            Position = UDim2.new(0, 9, 0, 28),
             Font = Enum.Font.GothamSemibold,
             Text = config.Content or "Content",
             TextColor3 = Color3.fromRGB(150, 150, 155),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             TextWrapped = true,
             AutomaticSize = Enum.AutomaticSize.Y,
@@ -2331,11 +2427,11 @@ function LinuxLib.Tab(config)
         
         Linux.Instance("UIPadding", {
             Parent = ParagraphFrame,
-            PaddingBottom = UDim.new(0, 10)
+            PaddingBottom = UDim.new(0, 9)
         })
         
         local function SetTitle(newTitle)
-            ParagraphFrame:GetChildren()[3].Text = tostring(newTitle)
+            ParagraphTitle.Text = tostring(newTitle)
         end
         
         local function SetContent(newContent)
@@ -2362,9 +2458,9 @@ function LinuxLib.Tab(config)
     function TabElements.Notification(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -2373,7 +2469,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(18, 18, 18),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 36),
+            Size = UDim2.new(1, -6, 0, 34),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -2389,28 +2485,36 @@ function LinuxLib.Tab(config)
             Thickness = 1
         })
         
-        Linux.Instance("TextLabel", {
+        local NotificationLabel = Linux.Instance("TextLabel", {
             Parent = NotificationFrame,
             BackgroundTransparency = 1,
             Size = UDim2.new(0.5, 0, 1, 0),
-            Position = UDim2.new(0, 10, 0, 0),
+            Position = UDim2.new(0, 9, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2
         })
         
+        NotificationFrame.MouseEnter:Connect(function()
+            TweenService:Create(NotificationLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        NotificationFrame.MouseLeave:Connect(function()
+            TweenService:Create(NotificationLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
+        
         local NotificationText = Linux.Instance("TextLabel", {
             Parent = NotificationFrame,
             BackgroundTransparency = 1,
-            Size = UDim2.new(0.5, -20, 1, 0),
-            Position = UDim2.new(0.5, 10, 0, 0),
+            Size = UDim2.new(0.5, -18, 1, 0),
+            Position = UDim2.new(0.5, 9, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = config.Default or "Notification",
             TextColor3 = Color3.fromRGB(255, 255, 255),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Right,
             TextTruncate = Enum.TextTruncate.AtEnd,
             ZIndex = 2
@@ -2440,9 +2544,9 @@ function LinuxLib.Tab(config)
     function TabElements.Keybind(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -2450,7 +2554,7 @@ function LinuxLib.Tab(config)
             Parent = Container,
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 36),
+            Size = UDim2.new(1, -6, 0, 34),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -2466,18 +2570,26 @@ function LinuxLib.Tab(config)
             Thickness = 1
         })
         
-        Linux.Instance("TextLabel", {
+        local KeybindLabel = Linux.Instance("TextLabel", {
             Parent = KeybindFrame,
             BackgroundTransparency = 1,
             Size = UDim2.new(0.6, 0, 1, 0),
-            Position = UDim2.new(0, 10, 0, 0),
+            Position = UDim2.new(0, 9, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2
         })
+        
+        KeybindFrame.MouseEnter:Connect(function()
+            TweenService:Create(KeybindLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        KeybindFrame.MouseLeave:Connect(function()
+            TweenService:Create(KeybindLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
         
         local currentKey = config.Default or Enum.KeyCode.None
         local isCapturing = false
@@ -2486,12 +2598,12 @@ function LinuxLib.Tab(config)
             Parent = KeybindFrame,
             BackgroundColor3 = Color3.fromRGB(19, 19, 19),
             BorderSizePixel = 0,
-            Size = UDim2.new(0.3, -16, 0, 24),
-            Position = UDim2.new(0.7, 0, 0.5, -12),
+            Size = UDim2.new(0.3, -14, 0, 22),
+            Position = UDim2.new(0.7, 0, 0.5, -11),
             Font = Enum.Font.GothamSemibold,
             Text = tostring(currentKey.Name),
             TextColor3 = Color3.fromRGB(255, 255, 255),
-            TextSize = 12,
+            TextSize = 11,
             ZIndex = 3,
             AutoButtonColor = false
         })
@@ -2516,31 +2628,27 @@ function LinuxLib.Tab(config)
                 inputConnection = nil
             end
             isCapturing = false
-            KeybindButton.Text = tostring(currentKey.Name)
-            KeybindButton.TextColor3 = Color3.fromRGB(255, 255, 255)
         end
         
         KeybindButton.MouseButton1Click:Connect(function()
-            if isCapturing then
-                StopCapture()
-                return
-            end
-            isCapturing = true
-            KeybindButton.Text = "..."
-            KeybindButton.TextColor3 = Color3.fromRGB(200, 200, 210)
-            
-            inputConnection = InputService.InputBegan:Connect(function(input, gameProcessedEvent)
-                if gameProcessedEvent then return end
-                if input.UserInputType == Enum.UserInputType.Keyboard then
-                    if input.KeyCode == Enum.KeyCode.Escape then
-                        StopCapture()
-                    else
-                        currentKey = input.KeyCode
-                        StopCapture()
-                        spawn(function() Linux:SafeCallback(config.Callback, currentKey) end)
+            if not isCapturing then
+                isCapturing = true
+                KeybindButton.Text = "..."
+                KeybindButton.TextColor3 = Color3.fromRGB(200, 200, 210)
+                
+                inputConnection = InputService.InputBegan:Connect(function(input, gameProcessedEvent)
+                    if gameProcessedEvent then return end
+                    if input.UserInputType == Enum.UserInputType.Keyboard then
+                        if input.KeyCode == Enum.KeyCode.Escape then
+                            StopCapture()
+                        else
+                            currentKey = input.KeyCode
+                            StopCapture()
+                            spawn(function() Linux:SafeCallback(config.Callback, currentKey) end)
+                        end
                     end
-                end
-            end)
+                end)
+            end
         end)
         
         spawn(function() Linux:SafeCallback(config.Callback, currentKey) end)
@@ -2580,9 +2688,9 @@ function LinuxLib.Tab(config)
     function TabElements.Colorpicker(config)
         elementOrder = elementOrder + 1
         if lastWasDropdown then
-            ContainerListLayout.Padding = UDim.new(0, 6)
+            ContainerListLayout.Padding = UDim.new(0, 4)
         else
-            ContainerListLayout.Padding = UDim.new(0, 2)
+            ContainerListLayout.Padding = UDim.new(0, 1)
         end
         lastWasDropdown = false
         
@@ -2591,7 +2699,7 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = Color3.fromRGB(21, 21, 21),
             BorderColor3 = Color3.fromRGB(39, 39, 42),
             BorderSizePixel = 0,
-            Size = UDim2.new(1, -8, 0, 36),
+            Size = UDim2.new(1, -6, 0, 34),
             ZIndex = 1,
             LayoutOrder = elementOrder
         })
@@ -2607,18 +2715,26 @@ function LinuxLib.Tab(config)
             Thickness = 1
         })
         
-        Linux.Instance("TextLabel", {
+        local ColorpickerLabel = Linux.Instance("TextLabel", {
             Parent = ColorpickerFrame,
             BackgroundTransparency = 1,
             Size = UDim2.new(0.6, 0, 1, 0),
-            Position = UDim2.new(0, 10, 0, 0),
+            Position = UDim2.new(0, 9, 0, 0),
             Font = Enum.Font.GothamSemibold,
             Text = config.Name,
             TextColor3 = Color3.fromRGB(200, 200, 210),
-            TextSize = 14,
+            TextSize = 13,
             TextXAlignment = Enum.TextXAlignment.Left,
             ZIndex = 2
         })
+        
+        ColorpickerFrame.MouseEnter:Connect(function()
+            TweenService:Create(ColorpickerLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+        end)
+        
+        ColorpickerFrame.MouseLeave:Connect(function()
+            TweenService:Create(ColorpickerLabel, TweenInfo.new(0.2), {TextColor3 = Color3.fromRGB(200, 200, 210)}):Play()
+        end)
         
         local currentColor = config.Default or Color3.fromRGB(255, 255, 255)
         local isPicking = false
@@ -2628,8 +2744,8 @@ function LinuxLib.Tab(config)
             BackgroundColor3 = currentColor,
             BorderSizePixel = 0,
             BorderColor3 = Color3.fromRGB(39, 39, 42),
-            Size = UDim2.new(0, 24, 0, 24),
-            Position = UDim2.new(1, -34, 0.5, -12),
+            Size = UDim2.new(0, 22, 0, 22),
+            Position = UDim2.new(1, -30, 0.5, -11),
             ZIndex = 3
         })
         
@@ -2682,10 +2798,11 @@ function LinuxLib.Tab(config)
                 BackgroundColor3 = Color3.fromRGB(12, 12, 15),
                 BorderSizePixel = 0,
                 BorderColor3 = Color3.fromRGB(39, 39, 42),
-                Size = UDim2.new(0, 200, 0, 180),
-                Position = UDim2.new(0.5, -100, 0.5, -90),
+                Size = UDim2.new(0, 190, 0, 170),
+                Position = UDim2.new(0.5, -95, 0.5, -85),
                 ZIndex = 10,
-                Visible = false
+                Visible = false,
+                BackgroundTransparency = 1
             })
             
             Linux.Instance("UICorner", {
@@ -2702,8 +2819,8 @@ function LinuxLib.Tab(config)
             local Palette = Linux.Instance("Frame", {
                 Parent = ColorpickerPopup,
                 BackgroundColor3 = Color3.fromHSV(currentHue, 1, 1),
-                Size = UDim2.new(0, 150, 0, 120),
-                Position = UDim2.new(0, 10, 0, 10),
+                Size = UDim2.new(0, 140, 0, 110),
+                Position = UDim2.new(0, 9, 0, 9),
                 ZIndex = 11,
                 BorderSizePixel = 0,
                 BorderColor3 = Color3.fromRGB(39, 39, 42),
@@ -2762,7 +2879,7 @@ function LinuxLib.Tab(config)
             paletteMarker = Linux.Instance("Frame", {
                 Parent = Palette,
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-                Size = UDim2.new(0, 8, 0, 8),
+                Size = UDim2.new(0, 7, 0, 7),
                 ZIndex = 12,
                 BorderSizePixel = 0,
                 BorderColor3 = Color3.fromRGB(0, 0, 0),
@@ -2783,8 +2900,8 @@ function LinuxLib.Tab(config)
             local HueBar = Linux.Instance("Frame", {
                 Parent = ColorpickerPopup,
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-                Size = UDim2.new(0, 20, 0, 120),
-                Position = UDim2.new(0, 170, 0, 10),
+                Size = UDim2.new(0, 18, 0, 110),
+                Position = UDim2.new(0, 158, 0, 9),
                 ZIndex = 11,
                 BorderSizePixel = 0,
                 BorderColor3 = Color3.fromRGB(39, 39, 42)
@@ -2818,7 +2935,7 @@ function LinuxLib.Tab(config)
             hueMarker = Linux.Instance("Frame", {
                 Parent = HueBar,
                 BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-                Size = UDim2.new(1, 4, 0, 6),
+                Size = UDim2.new(1, 3, 0, 5),
                 ZIndex = 12,
                 BorderSizePixel = 0,
                 BorderColor3 = Color3.fromRGB(0, 0, 0),
@@ -2840,8 +2957,8 @@ function LinuxLib.Tab(config)
             local ColorPreview = Linux.Instance("Frame", {
                 Parent = ColorpickerPopup,
                 BackgroundColor3 = currentColor,
-                Size = UDim2.new(0, 180, 0, 30),
-                Position = UDim2.new(0, 10, 0, 140),
+                Size = UDim2.new(0, 167, 0, 28),
+                Position = UDim2.new(0, 9, 0, 130),
                 ZIndex = 11,
                 BorderSizePixel = 0,
                 BorderColor3 = Color3.fromRGB(39, 39, 42),
@@ -2902,7 +3019,7 @@ function LinuxLib.Tab(config)
                     hueDragging = true
                     local pos = input.Position
                     local huePos = HueBar.AbsolutePosition
-                    local hueSize = HueBar.AbsoluteSize
+                    local hue Size = HueBar.AbsoluteSize
                     local y = math.clamp((pos.Y - huePos.Y) / hueSize.Y, 0, 1)
                     currentHue = 1 - y
                     hueMarker.Position = UDim2.new(0.5, 0, y, 0)
@@ -2943,8 +3060,14 @@ function LinuxLib.Tab(config)
                 if isPicking then
                     CreateColorpickerPopup()
                     ColorpickerPopup.Visible = true
+                    ColorpickerPopup.BackgroundTransparency = 1
+                    local fadeIn = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+                    TweenService:Create(ColorpickerPopup, fadeIn, {BackgroundTransparency = 0}):Play()
                 else
                     if ColorpickerPopup then
+                        local fadeOut = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In)
+                        TweenService:Create(ColorpickerPopup, fadeOut, {BackgroundTransparency = 1}):Play()
+                        task.wait(0.3)
                         ColorpickerPopup.Visible = false
                     end
                 end
@@ -2960,6 +3083,9 @@ function LinuxLib.Tab(config)
                 if mousePos.X < popupPos.X or mousePos.X > popupPos.X + popupSize.X or
                    mousePos.Y < popupPos.Y or mousePos.Y > popupPos.Y + popupSize.Y then
                     isPicking = false
+                    local fadeOut = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In)
+                    TweenService:Create(ColorpickerPopup, fadeOut, {BackgroundTransparency = 1}):Play()
+                    task.wait(0.3)
                     ColorpickerPopup.Visible = false
                 end
             end
